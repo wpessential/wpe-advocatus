@@ -1,1 +1,1 @@
-# wpe-advocatus
+# WPE Advocatus
