@@ -42,24 +42,30 @@ function big_banner_shortcode($atts, $content = null)
   }
 
   ?>
-<section>
-<div class="fxd-bg dark-overlay" style="background-image:url(<?php echo $banner_image ?>);">
-<div class="hero-wrap">
-<div class="container">
-<div class="hero-content">
-<div class="hero-info">
-<h1><?php echo esc_html($banner_title); ?></h1>
-<p><?php echo esc_html($banner_subtitle); ?></p>
-</div>
-<div class="hero-btn">
-<a href="#" class="theme-btn"><?php 
-echo esc_html($contact_us); ?></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <section>
+    <div class="fxd-bg dark-overlay" style="background-image:url(<?php echo $banner_image ?>);">
+      <div class="hero-wrap">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-info">
+              <h1>
+                <?php echo esc_html($banner_title); ?>
+              </h1>
+              <p>
+                <?php echo esc_html($banner_subtitle); ?>
+              </p>
+            </div>
+            <div class="hero-btn">
+              <a href="#" class="theme-btn">
+                <?php
+                echo esc_html($contact_us); ?>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <?php
