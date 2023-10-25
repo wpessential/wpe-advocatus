@@ -140,6 +140,10 @@ function register_shortcode()
 	include_once(get_template_directory() . '/includes/faq_child_shortcode.php');
 	include_once(get_template_directory() . '/includes/our_client_shortcode.php');
 	include_once(get_template_directory() . '/includes/client_child_shortcode.php');
+	include_once(get_template_directory() . '/includes/contact_shortcode.php');
+	include_once(get_template_directory() . '/includes/contact_child_shortcode.php');
+	include_once(get_template_directory() . '/includes/blog_shortcode.php');
+
 
 
 
@@ -161,6 +165,9 @@ function register_shortcode()
 	add_shortcode('faq_child','faq_shortcode');
 	add_shortcode('client_area','client_area_shortcode');
 	add_shortcode('client_child','client_child_shortcode');
+	add_shortcode('contact_area','contact_area_shortcode');
+	add_shortcode('contact_child','contact_child_shortcode');
+	add_shortcode('blog','blog_shortcode');
 
 
 

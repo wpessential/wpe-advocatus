@@ -1,8 +1,8 @@
 <?php
 get_header();
 
-while (have_posts()):
-    the_post();
+if (have_posts()) {
+     the_post();
     ?>
     <section class="section-detail mb-60">
         <div class="container">
@@ -26,7 +26,7 @@ while (have_posts()):
                     </div>
                 </div>
                 <figure class="post-detail-img overflow-hidden position-relative ">
-                     <?php the_post_thumbnail() ?>
+                    <?php the_post_thumbnail() ?>
                 </figure>
                 <div class="post-detail-content ">
                     <p>
@@ -194,5 +194,6 @@ while (have_posts()):
             </div>
         </div>
     </section>
-<?php endwhile;
+<?php 
+}
 get_footer();
