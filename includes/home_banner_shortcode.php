@@ -1,4 +1,5 @@
 <?php
+
 function home_banner_shortcode($atts, $content = null)
 {
     $user_inputs = array(
@@ -7,6 +8,7 @@ function home_banner_shortcode($atts, $content = null)
         'name' => '',
         'lawyer' => '',
         'contact_us' => '',
+        'heading'=> '',
 
     );
 
@@ -25,6 +27,7 @@ function home_banner_shortcode($atts, $content = null)
                         <div class="hero-info">
                             <h1><?php echo esc_html($name); ?></h1>
                             <p><?php echo esc_html($lawyer); ?></p>
+                            <p><?php echo esc_html($heading ); ?></p>
                         </div>
                         <div class="hero-btn">
                             <a href="#" class="theme-btn"><?php echo esc_html($contact_us); ?></a>

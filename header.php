@@ -37,9 +37,11 @@
                             'theme_location' => 'primary',
                             'container' => 'nav',
                             'container_class'      => 'nav-links',
+                            'container_id'      => 'nav-links',
                             // 'container_id'         => 'navbarResponsive',
                               // Change this to match your HTML structure
                             'menu_class' => 'nav-menu',  // Adjust the class names as needed
+                            'menu_id'=>'nav-menu-toogle'
 
                         ));
                 ?>
@@ -49,9 +51,9 @@
               onclick="if (!window.__cfRLUnblockHandlers) return false; hideMenu()">
               <i class="fa-solid fa-xmark"></i></a>
           </nav> -->
-          <!-- <div class="menu-toggle" id="bar">
+          <div class="menu-toggle" id="bar">
             <a class="responsive-menu-trigger d-inline-block" href="#"><i class="fas fa-bars"></i></a>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

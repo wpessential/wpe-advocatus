@@ -6,20 +6,14 @@ function publications_area_shortcode($atts, $content = null)
         'background_heading' => '',
         'publication_heading' => '',
         'publication_detail' => '',
-        'author_name' => '',
+        // 'post_category' => '',
+        // 'post_count'=> ''
     );
 
     $atts = shortcode_atts($user_inputs, $atts, 'publications_area');
     extract($atts); // convert associate array into variable and their value
     ob_start();
-    $_args = [
-        // 'posts_count' => $post_counts,
-        //'cat' => 10,
-        'author_name' => $author_name,
-    ];
-    // The Query.
-    $the_query = new WP_Query($_args);
-    if ($the_query->have_posts()) {
+   
 
         if ($publication_area_visibility) {
             ?>
@@ -39,9 +33,7 @@ function publications_area_shortcode($atts, $content = null)
                     </div>
                     <div class="publicate-wrapper">
                         <div class="row">
-                            <?php while ($the_query->have_posts()) {
-                                $the_query->the_post();
-                                ?>
+                            
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="publicate-box">
                                         <figure><a href="#"><?php the_post_thumbnail() ?></a></figure>
@@ -70,10 +62,7 @@ function publications_area_shortcode($atts, $content = null)
                                     </div>
 
                                 </div>
-                                <?php
-                            }
-                            wp_reset_postdata();
-                            ?>
+                               
                         </div>
                     </div>
                 </div>
@@ -83,4 +72,3 @@ function publications_area_shortcode($atts, $content = null)
         }
     }
     return ob_get_clean();
-}

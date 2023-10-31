@@ -26,47 +26,35 @@ function client_area_shortcode($atts, $content = null)
         $background_image = wp_get_attachment_image_url($background_image);
         ?>
 
-        <section class="review">
-            <div class="fxd-bg py-80" style="background-image: url('<?php echo $background_image; ?>');">
-                <div class="container">
-                    <div class="sec-tl mb-60 light">
-                        <h1 class="color-3">
-                            <?php echo esc_html($background_heading); ?>
-                        </h1>
-                        <h2>
-                            <?php echo esc_html($client_heading); ?>
-                        </h2>
-                        <p>
-                            <?php echo esc_html($client_detail); ?>
-                        </p>
+<section class="review">
+    <div class="fxd-bg py-80" style="background-image: url('<?php echo $background_image; ?>');">
+    <div class="container">
+        <div class="sec-tl mb-60 light">
+            <h1 class="color-3"><?php echo esc_html($background_heading); ?></h1>
+            <h2><?php echo esc_html($client_heading); ?></h2>
+            <p><?php echo esc_html($client_detail); ?></p>
+        </div>
+        <div class="review-wrapper">
+            <div class="row gx-5">
+                <div class="col-lg-4">
+                    <div class="review-preview">
+                        <figure><a href="#"><img src="<?php echo wp_get_attachment_image_url($client_image); ?>"></a></figure>
+                        <div class="primary-box"></div>
                     </div>
-                    <div class="review-wrapper">
-                        <div class="row gx-5">
-                            <div class="col-lg-4">
-                                <div class="review-preview">
-                                    <figure><a href="#"><img src="<?php echo wp_get_attachment_image_url($client_image); ?>"
-                                                alt="Men"></a></figure>
-                                    <div class="primary-box"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="review-box">
-                                    <div class="owl-carousel owl-theme owl-review">
-                                        
-                                        <?php echo do_shortcode($content); ?>
-                                        <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
-                                        <div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            
+                </div>
+                <div class="col-lg-8">
+                    <div class="review-box">
+                        <div class="owl-carousel owl-theme owl-review">
+                        <?php echo do_shortcode($content); ?>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>F
+        </div>
+    </div>
+</div>
+</section>
+
 
 
 
