@@ -6,6 +6,7 @@ function client_child_shortcode($atts, $content = null)
         'client_name' => '',
         'client_portfolio' => '',
         'qoute_sign' => '',
+        'heading_link'=> '',
     );
 
     $atts = shortcode_atts($user_inputs, $atts, 'client_child');
@@ -23,7 +24,7 @@ function client_child_shortcode($atts, $content = null)
             <p>
                 <?php echo esc_html($client_qoute); ?>
             </p>
-            <h4><a href="#">
+            <h4><a href="<?php echo esc_url($heading_link); ?>">
                     <?php echo esc_html($client_name); ?>
                 </a></h4>
             <span>

@@ -8,6 +8,7 @@ function home_banner_shortcode($atts, $content = null)
         'name' => '',
         'lawyer' => '',
         'contact_us' => '',
+        'contact_detail'=> '',
         'heading'=> '',
 
     );
@@ -30,7 +31,7 @@ function home_banner_shortcode($atts, $content = null)
                             <p><?php echo esc_html($heading ); ?></p>
                         </div>
                         <div class="hero-btn">
-                            <a href="#" class="theme-btn"><?php echo esc_html($contact_us); ?></a>
+                            <a href="<?php echo esc_url($contact_detail); ?>" class="theme-btn"><?php echo esc_html($contact_us); ?></a>
                         </div>
                     </div>
                 </div>

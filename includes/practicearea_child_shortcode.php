@@ -14,6 +14,12 @@ function practicearea_child_shortcode($atts, $content = null)
         'icon_4'=>'',
         'heading_4' => '',
         'heading_4_detail' => '',
+        'link_1'=> '',
+        'link_2'=> '',
+        'link_3'=> '',
+        'link_4'=> '',
+
+
     );
 
     $atts = shortcode_atts($user_inputs, $atts, 'practice_area_child');
@@ -27,7 +33,7 @@ function practicearea_child_shortcode($atts, $content = null)
                 <a href="#" class="icon"><i class="<?php echo $icon_1;?>"></i></a>
             </div>
             <div class="area-content">
-                <h3><a href="#">
+                <h3><a href="<?php echo esc_url($link_1); ?>">
                         <?php echo esc_html($heading_1); ?>
                     </a></h3>
                 <p>
@@ -42,7 +48,7 @@ function practicearea_child_shortcode($atts, $content = null)
                 <a href="#" class="icon"><i class="<?php echo $icon_2;?>"></i></a>
             </div>
             <div class="area-content">
-                <h3><a href="#">
+                <h3><a href="<?php echo esc_url($link_2); ?>">
                         <?php echo esc_html($heading_2); ?>
                     </a></h3>
                 <p>
@@ -57,7 +63,7 @@ function practicearea_child_shortcode($atts, $content = null)
                     <a href="#" class="icon"><i class="<?php echo $icon_3;?>"></i></a>
                 </div>
                 <div class="area-content">
-                    <h3><a href="#">
+                    <h3><a href="<?php echo esc_url($link_3); ?>">
                             <?php echo esc_html($heading_3); ?>
                         </a></h3>
                     <p>
@@ -72,7 +78,7 @@ function practicearea_child_shortcode($atts, $content = null)
                     <a href="#" class="icon"><i class="<?php echo esc_html($icon_4);?>"></i></a>
                 </div>
                 <div class="area-content">
-                    <h3><a href="#">
+                    <h3><a href="<?php echo esc_url($link_4); ?>">
                             <?php echo esc_html($heading_4); ?>
                         </a></h3>
                     <p>
