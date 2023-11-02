@@ -29,7 +29,7 @@ function attorney_child_shortcode($atts, $content = null)
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="team-box">
-            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_1_image); ?>" alt="Team"></figure>
+            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_1_image,'attorney'); ?>" alt="Team"></figure>
             <div class="team-content">
                 <h3><a href="<?php echo esc_url($attorney_1_link); ?>"><?php echo esc_html($attorney_1_name); ?></a></h3>
                 <p><?php echo esc_html($attorney_1_designation); ?></p>

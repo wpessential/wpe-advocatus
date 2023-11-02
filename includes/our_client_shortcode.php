@@ -39,7 +39,7 @@ function client_area_shortcode($atts, $content = null)
             <div class="row gx-5">
                 <div class="col-lg-4">
                     <div class="review-preview">
-                        <figure><a href="<?php echo esc_url($client_link); ?>"><img src="<?php echo wp_get_attachment_image_url($client_image); ?>"></a></figure>
+                        <figure><a href="<?php echo esc_url($client_link); ?>"><img src="<?php echo wp_get_attachment_image_url($client_image,'client'); ?>"></a></figure>
                         <div class="primary-box"></div>
                     </div>
                 </div>
