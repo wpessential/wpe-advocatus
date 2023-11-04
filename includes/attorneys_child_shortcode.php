@@ -38,7 +38,7 @@ function attorney_child_shortcode($atts, $content = null)
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="team-box">
-            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_2_image); ?>" alt="Team"></figure>
+            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_2_image,'attorney'); ?>" alt="Team"></figure>
             <div class="team-content">
                 <h3><a href="<?php echo esc_url($attorney_2_link); ?>"><?php echo esc_html($attorney_2_name); ?></a></h3>
                 <p><?php echo esc_html($attorney_2_designation); ?></p>
@@ -47,7 +47,7 @@ function attorney_child_shortcode($atts, $content = null)
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="team-box">
-            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_3_image); ?>" alt="Team"></figure>
+            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_3_image,'attorney'); ?>" alt="Team"></figure>
             <div class="team-content">
                 <h3><a href="<?php echo esc_url($attorney_3_link); ?>"><?php echo esc_html($attorney_3_name); ?></a></h3>
                 <p><?php echo esc_html($attorney_3_designation); ?></p>
@@ -56,7 +56,7 @@ function attorney_child_shortcode($atts, $content = null)
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="team-box">
-            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_4_image); ?>" alt="Team"></figure>
+            <figure><img src="<?php echo wp_get_attachment_image_url($attorney_4_image,'attorney'); ?>" alt="Team"></figure>
             <div class="team-content">
                 <h3><a href="<?php echo esc_url($attorney_4_link); ?>"><?php echo esc_html($attorney_4_name); ?></a></h3>
                 <p><?php echo esc_html($attorney_4_designation); ?></p>

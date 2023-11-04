@@ -176,15 +176,18 @@ if (!function_exists('enqueue_files')) {
 		wp_register_style('owl-carousel-style', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', array(), '1.0');
 		wp_register_style('responsive-style', get_template_directory_uri() . '/assets/css/responsive.css', array(), '1.0');
 		wp_register_style('style-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0');
+		wp_register_style('flex-box-style', get_template_directory_uri() . '/assets/css/flex-box.css', array(), '1.0');
 
 
 		wp_register_style('bootstrap-min-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '1.0');
 
+		wp_register_style('google-font', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap', array(), null, 'all');
+
 		// Enqueue the CSS file
 
 
-
-
+		wp_enqueue_style('flex-box-style');
+		wp_enqueue_style('google-fonts');
 		wp_enqueue_style('owl-carousel-style');
 		wp_enqueue_style('bootstrap-min-style');
 		wp_enqueue_style('all-min-style');
@@ -210,12 +213,17 @@ if (!function_exists('enqueue_files')) {
 		// REGISTERING FONTS
 		wp_register_script('font_1', get_template_directory_uri() . '/assets/webfonts/fa-solid-900.woff2.har', array(), '1.0', true);
 		wp_register_script('font_2', get_template_directory_uri() . '/assets/webfonts/fa-brands-400.woff2.har', array(), '1.0', true);
+		wp_register_script('font_3', get_template_directory_uri() . '/assets/webfonts/fa-regular-400.woff2.har', array(), '1.0', true);
+		wp_register_script('font_4', get_template_directory_uri() . '/assets/webfonts/fa-v4compatibility.woff2', array(), '1.0', true);
+
 
 		wp_enqueue_script('font_1');
 		wp_enqueue_script('font_2');
+		wp_enqueue_script('font_3');
+		wp_enqueue_script('font_4');
 	}
 }
-add_action('wp_enqueue_scripts', 'enqueue_files');
+add_action('wp_enqueue_scripts', 'enqueue_files',1000);
 
 
 
