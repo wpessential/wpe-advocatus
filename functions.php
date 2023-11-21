@@ -226,6 +226,76 @@ if (!function_exists('enqueue_files')) {
 add_action('wp_enqueue_scripts', 'enqueue_files',1000);
 
 
+//////////////////////////////////////////////////////////////////////////////////////
+/* This register the js and css files for lightbox */
+function register_lightbox_files() {
+
+	wp_register_script('lightbox', get_template_directory_uri() . '/assets/js/custom_light_box.js', array(), '1.0', true);
+	wp_register_script('bootstrap-bundle-min-scripts', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), '1.0', true);
+	wp_register_style('all-min-styles', get_template_directory_uri() . '/assets/css/all.min.css', array(), '1.0');
+
+
+}
+add_action('wp_enqueue_scripts', 'register_lightbox_files',1000);
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+/**
+ * Register oEmbed Widget.
+ *
+ * Include widget file and register widget class.
+ *
+ * @since 1.0.0
+ * @param \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
+ * @return void
+ */
+
+
+ function register_new_widgets( $widgets_manager ) {
+
+	require_once( get_template_directory() .'/includes/elementor/BannerWithButton.php' );// file where the class particular widgets settings and class is present 
+	require_once( get_template_directory() .'/includes/elementor/AboutUs.php' );
+	require_once( get_template_directory() .'/includes/elementor/PracticeArea.php' );
+	require_once( get_template_directory() .'/includes/elementor/Attornies.php' );
+	//require_once( get_template_directory() .'/includes/elementor/Review.php' );
+	require_once( get_template_directory() .'/includes/elementor/Publications.php' );
+	require_once( get_template_directory() .'/includes/elementor/FAQ.php' );
+	//require_once( get_template_directory() .'/includes/elementor/LightBox.php' );
+
+
+
+
+
+	$widgets_manager->register( new \BannerWithButton() );
+	$widgets_manager->register( new \AboutUS() );
+	$widgets_manager->register( new \PracticeArea() );
+	$widgets_manager->register( new \Attornies() );
+	//$widgets_manager->register( new \Review() );
+	$widgets_manager->register( new \Publications() );
+	$widgets_manager->register( new \FAQ() );
+	//$widgets_manager->register( new \LightBox() );
+
+
+
+
+
+
+
+}
+add_action( 'elementor/widgets/register', 'register_new_widgets' );
+
+
+
+
+
+
+
+
 
 add_action('init', 'register_shortcode'); // register the code using this hook
 function register_shortcode()
@@ -287,3 +357,28 @@ function register_shortcode()
 // if (function_exists("Kirki")) {
 // 	require_once get_template_directory() . '/config/config.php';
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     
